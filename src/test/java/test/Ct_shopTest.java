@@ -15,6 +15,7 @@ public class Ct_shopTest extends BaseTest {
     }
     @Test
     public void ct_shopTest(){
+        ct_shopHome.clickButtonPrihvati();
 
     }
 }
