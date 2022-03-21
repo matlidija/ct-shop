@@ -1,6 +1,7 @@
 package test;
 
 import base.BaseTest;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import page.*;
@@ -36,7 +37,10 @@ public class Ct_shopTest extends BaseTest {
         js.executeScript("window.scrollBy(0,900)");
         ct_sporetiBeko.clickLinkFSE64320DW();
         ct_sporetiBeko.clickCloseIframe();
-//        screenshot.screenShotFile();
+        js.executeScript("window.scrollBy(0,900)");
+        Assert.assertTrue(ct_sporetiBeko.textFiokaIsDisplay());
+        Assert.assertEquals("Metalna fioka", ct_sporetiBeko.textFiokaIsGet());
+       screenshot.screenShotFile();
 
 
 
